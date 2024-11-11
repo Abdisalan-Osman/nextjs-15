@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "1mheejgn.api.sanity.io",
+        hostname: "*",
       },
     ],
   },
@@ -67,34 +67,3 @@ export default withSentryConfig(nextConfig, {
   // https://vercel.com/docs/cron-jobs
   automaticVercelMonitors: true,
 });
-
-// import type { NextConfig } from "next";
-
-// const nextConfig: NextConfig = {
-//   typescript: {
-//     ignoreBuildErrors: true,
-//   },
-//   eslint: {
-//     ignoreDuringBuilds: true,
-//   },
-//   images: {
-//     dangerouslyAllowSVG: true,
-//     remotePatterns: [
-//       {
-//         protocol: "https",
-//         hostname: "*",
-//       },
-//     ],
-//   },
-//   experimental: {
-//     ppr: "incremental",
-//     after: true,
-//   },
-//   devIndicators: {
-//     appIsrStatus: true,
-//     buildActivity: true,
-//     buildActivityPosition: "bottom-right",
-//   },
-// };
-
-// export default nextConfig;
